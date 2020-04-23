@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
 
  registertxt:{
   color: '#FFF',
+  fontSize: 17,
 
  },
  logo:{
