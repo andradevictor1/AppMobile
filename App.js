@@ -58,7 +58,7 @@ const App = () => {
              </TouchableOpacity >
              <TouchableOpacity style = {styles.btnRegister}>
 
-             <Text style = {styles.registertxt}>Criar Conta Gratituita</Text>  
+             <Text style = {styles.registertxt}>Criar Conta</Text>  
              </TouchableOpacity>
            </View>
            </KeyboardAvoidingView>
