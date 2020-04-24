@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "806684191107",
+    "firebase_url": "https://lindataxi-8774b.firebaseio.com",
+    "project_id": "lindataxi-8774b",
+    "storage_bucket": "lindataxi-8774b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806684191107:android:c92bdc94edf5998e696eb6",
+        "android_client_info": {
+          "package_name": "com.lindataxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806684191107-r08v1elunefdpki5nq541uaa7fc6linu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh5d3-1So0lspz2ta1K0h9AQSZ8UZqPQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806684191107-r08v1elunefdpki5nq541uaa7fc6linu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
