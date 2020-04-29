@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import firebase from 'react-native';
 import {
   SafeAreaView,
   StyleSheet,
@@ -32,6 +33,28 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
+
+state = {
+  email: '',
+  password: '',
+
+}
+
+login = async () =>{
+  const {email, password} = this.state;
+  
+try {
+  const user = await firebase.auth().sigInWithEmailAndPassword(email,password);
+  this.ListeningStateChangedEvent({isAuthenticated: true});
+  console.log(user);
+
+} catch (error) {
+  console.log(error);
+}
+
+
+}
+
   return (
     <>
   
@@ -45,14 +68,18 @@ const App = () => {
              placeholder= "Email"
              autoCorrect = {false}
              onChangeText= {() => {}}
+             value={this.StaticRange.email}
+             onChangeText = {email => this.ListeningStateChangedEvent({email})}
              />
               <TextInput style = {styles.input}
              placeholder= "Senha"
              autoCorrect = {false}
              onChangeText= {() => {}}
+             value={this.StaticRange.password}
+             onChangeText = {password => this.ListeningStateChangedEvent({password})}
              />
 
-             <TouchableOpacity style = {styles.btn}>
+             <TouchableOpacity style = {styles.btn} onPress = {this.login}>
 
              <Text style = {styles.btntxt}>Acessar Sistema</Text>  
              </TouchableOpacity >
@@ -60,6 +87,7 @@ const App = () => {
 
              <Text style = {styles.registertxt}>Criar Conta</Text>  
              </TouchableOpacity>
+             {this.state.isAuthenticated ? <Text> Logado com sucesso!</Text>: ''}
            </View>
            </KeyboardAvoidingView>
           
